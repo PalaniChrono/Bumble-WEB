@@ -1,0 +1,41 @@
+<!-- <div class="loading" [class.d-block]="loading" [class.d-none]="!loading"> <img class="w-50" src="/assets/images/bumblestudioloader.gif" alt=""></div> -->
+<div class="container-fluid menubar p-0">
+
+      <nav class="navbar navbar-expand-lg navbar-light  ">
+          <a class="navbar-brand text-white d-xs-none d-none d-xl-block" role="button"> <i class="fas fa-user"></i>&nbsp;
+
+
+            Login</a>
+          <a class="navbar-brand text-white d-xl-none "  > <button class="submit-btn2" [routerLink]="'../bookus'">BOOK US <i class="fas fa-chevron-circle-right" style="margin: 0;" ></i></button></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav   align-items-center">
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/']" routerLinkActive="activated-menu" [routerLinkActiveOptions]="{exact:true}" (click)="pagetop()">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"     [routerLink]="['/gallery']" routerLinkActive="activated-menu"   (click)="pagetop()">Gallery</a>
+                </li> <li class="nav-item">
+                  <a class="nav-link"      [routerLink]="['/services']" routerLinkActive="activated-menu" (click)="pagetop()">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"   [routerLink]="['/contactus']" routerLinkActive="activated-menu" (click)="pagetop()">Contact us</a>
+                </li>
+                 <li class="nav-item a d-xs-none d-lg-block d-none">
+                  <a class="nav-link"><button class="submit-btn2"  routerLink="/bookus" (click)="pagetop()">BOOK US <i class="fas fa-chevron-circle-right" style="padding-left: 7% !important; margin: 0 !important;"></i></button>  </a>
+                </li>
+                <li class="nav-item  d-xl-none ">
+                  <a class="nav-link" role="button"><i class="fas fa-user"></i>&nbsp;Login</a>
+                </li>
+            </ul>
+
+          </div>
+        </nav>
+
+  </div>
+  <script>
+    $(window).load(function(){$('html, body').animate({scrollTop:0}, 'fast');});
+   </script>

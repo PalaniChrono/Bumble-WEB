@@ -1,0 +1,4 @@
+.mat-tab-label-active{
+  position: relative;
+  bottom: -1.5em !important;
+}

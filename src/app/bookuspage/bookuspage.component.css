@@ -1,0 +1,11 @@
+/* .marg-bottom{
+    top:50%;
+    bottom: 50%;
+} */
+.add-button{
+    margin-top: 5% !important; 
+}
+.remove-button{
+    float: right; 
+    margin-top: 4%; 
+}

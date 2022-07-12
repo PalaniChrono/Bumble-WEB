@@ -1,0 +1,101 @@
+<div class="loading" [class.d-block]="loading" [class.d-none]="!loading"> <img class="w-50" src="/assets/images/bumblestudioloader.gif" alt=""></div>
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col-12 text-center">
+      <img src="/assets/images/LogoBlack.png" class="headerLogoImg" alt="" [routerLink]="''">
+    </div>
+  </div>
+</div>
+<app-header></app-header>
+<div class="flower-design" style="margin: 2% auto;">
+    <span class="leftLine d-inline-block"></span><span  class=" centerFlowerImg d-inline-block">   <img src="/assets/images/1.png" alt=""></span><span class="rightLine d-inline-block"></span>
+  </div>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12 col-md-12 col-lg-12 col-12 col-sm-12">
+            <h1 class="gallery-header">Gallery</h1>
+
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <mat-tab-group [selectedIndex]="menuIndex">
+
+                <mat-tab label="All">
+                     <div class="container mt-3">
+
+                        <h6 class="gallerySecAllContent"  >
+                            {{alltextcontent}}
+                        </h6>
+                    <mat-grid-list cols="3" [gutterSize]="'1.5%'" >
+                        <mat-grid-tile
+                            *ngFor="let all of all"
+                            [colspan]="all.cols"
+                            [rowspan]="all.rows"
+                            [class.mat-elevation-z8]="isActive"  class="swing">
+                            <img  class="w-100 img-height  all-section-4  grid-image-{{all.text}} "  [src]="all.imageUrl" alt=""  >
+
+                        </mat-grid-tile>
+                      </mat-grid-list>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Weddings" [class.selected-tab]="menuIndex == 1" >
+                    <div class="container mt-3" >
+                        <h6 class="gallerySecAllContent" >
+                           {{weddingTextContent}}
+                        </h6>
+                        <mat-grid-list cols="3" [gutterSize]="'1.5%'">
+                            <mat-grid-tile
+                                *ngFor="let wedding of wedding"
+                                [colspan]="wedding.cols"
+                                [rowspan]="wedding.rows"
+                                [class.mat-elevation-z8]="isActive"
+                                class="swing" >
+                                <img  class="w-100 img-height all-section-4 shadow-4  grid-image-{{wedding.text}} "  [src]="wedding.imageUrl" alt="">
+                            </mat-grid-tile>
+                          </mat-grid-list>
+                        </div>
+                 </mat-tab>
+                <mat-tab label="Outdoors" >
+                    <div class="container mt-3" >
+                        <h6 class="gallerySecAllContent"  >
+                            {{outDoorTextContent}}
+                        </h6>
+                        <mat-grid-list cols="3" [gutterSize]="'1.5%'">
+                            <mat-grid-tile
+                                *ngFor="let outdoor of outdoor"
+                                [colspan]="outdoor.cols"
+                                [rowspan]="outdoor.rows"
+                                [class.mat-elevation-z8]="isActive"
+                                class="swing" >
+                                <img  class="w-100  img-height all-section-4  grid-image-{{outdoor.text}} "  [src]="outdoor.imageUrl" alt="">
+                            </mat-grid-tile>
+                          </mat-grid-list>
+                        </div>
+                </mat-tab>
+                <mat-tab label="Babywash" >
+                    <div class="container mt-3" >
+                        <h6 class="gallerySecAllContent" >
+                            {{babywashtext}}
+                        </h6>
+                        <mat-grid-list cols="3" [gutterSize]="'1.5%'">
+                            <mat-grid-tile
+                                *ngFor="let babywash of babywash"
+                                [colspan]="babywash.cols"
+                                [rowspan]="babywash.rows"
+                                [class.mat-elevation-z8]="isActive"
+                                class="swing" >
+                                <img  class="w-100  img-height all-section-4  grid-image-{{babywash.text}} "  [src]="babywash.imageUrl" alt="">
+                              <!-- {{tile.imageUrl}} -->
+                            </mat-grid-tile>
+                          </mat-grid-list>
+                        </div>
+                </mat-tab>
+              </mat-tab-group>
+
+        </div>
+    </div>
+</div>

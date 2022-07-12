@@ -1,0 +1,524 @@
+<div class="loading" id="loader" [class.d-block]="loading" [class.d-none]="!loading"> <img class="w-50" src="/assets/images/bumblestudioloader.gif" alt=""></div>
+<div class="container-fluid carousel-shade ">
+    <div class="row">
+        <div class="col p-0">
+            <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide><img class="homeCarouselImg"  src="{{banner_1}}"  alt=""  class="animate__animated animate__bounce"></ng-template>
+                <ng-template carouselSlide><img class="homeCarouselImg"  src="{{banner_2}}"   alt="" class="animate__animated animate__bounce"></ng-template>
+                <ng-template carouselSlide><img class="homeCarouselImg" src="{{banner_3}}"    alt="" class="animate__animated animate__bounce"></ng-template>
+                <ng-template carouselSlide><img class="homeCarouselImg"   src="{{banner_4}}"  alt="" class="animate__animated animate__bounce"></ng-template>
+             </owl-carousel-o>
+
+        </div>
+
+    </div>
+</div>
+
+<app-header></app-header>
+
+
+  <div class="container homeSection-1">
+
+      <div class="flower-design">
+        <span class="leftLine d-inline-block"></span><span  class=" centerFlowerImg d-inline-block">   <img src="/assets/images/1.png" alt=""></span><span class="rightLine d-inline-block"></span>
+      </div>
+
+      <div class="row homecard card-1">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-9 firstSec-image secOne-img p-0">
+              <img data-aos="flip-left" [src]="homeCard1Img" alt="">
+
+          </div>
+          <div class="col-12 col-sm-12  col-md-12 col-lg-3 secOne-txt my-lg-auto my-md-3 my-xl-auto my-sm-3 my-3">
+              <div class="row">
+                  <div class="col"></div>
+              </div>
+              <div class="row" data-aos="flip-right">
+                  <div class="col-12  firstSec-text p-5">
+                    <div class="row ">
+                        <div class="col-12 firstSec-text-img  d-flex justify-content-center">
+                            <img class="iconimg" [src]="homeCard1IconImg" alt="">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                          <h4 class="firstSec-text-header mt-4">
+                              {{HomeCard1Heading}}
+                          </h4>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12  firstSec-text-text mt-3">
+                            <h6>
+                              {{HomeCard1TextContent}}
+
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mob-respo1">
+                            <button class=" explore-btn mt-4" [ngClass]="{'router-link-active': '1'}" [routerLink]="['/gallery', '1']" routerLinkActive="router-link-active">
+                                EXPLORE
+                                    <i class="fa fa-long-arrow-alt-right"></i>
+
+                            </button>
+
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col"></div>
+              </div>
+
+
+          </div>
+      </div>
+      <div class="flower-design">
+        <span class="leftLine d-inline-block"></span><span  class=" centerFlowerImg d-inline-block">   <img src="/assets/images/1.png" alt=""></span><span class="rightLine d-inline-block"></span>
+      </div>
+      <div class="row homecard card-2">
+
+
+        <div class="col-12 col-sm-12  col-md-12 col-lg-3 secOne-txt my-lg-auto my-md-3 my-xl-auto my-sm-3 my-3 order-2 order-sm-2 order-md-2 order-xl-1">
+            <div class="row"><div class="col-12"></div></div>
+
+                <div class="row"  data-aos="flip-right">
+                    <div class="col-12 firstSec-text p-5">
+                        <div class="row">
+                            <div class="col-12 firstSec-text-img  d-flex justify-content-center">
+                                <img  class="iconimg " [src]="homeCard2IconImg" alt="">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="firstSec-text-header mt-4">
+                                    {{HomeCard2Heading}}
+                                </h4>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12  firstSec-text-text mt-3">
+                                <h6>
+                                  {{HomeCard2TextContent}}
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12  mob-respo1">
+                                <button class=" explore-btn mt-4" [routerLink]="['/gallery', '2']" routerLinkActive="router-link-active">
+                                    EXPLORE
+                                        <i class="fa fa-long-arrow-alt-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col"></div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-9 firstSec-image secOne-img p-0 order-1 order-sm-1 order-md-1 order-xl-2">
+            <img  data-aos="flip-left" [src]="homeCard2Img" alt="">
+        </div>
+    </div>
+    <div class="flower-design">
+        <span class="leftLine d-inline-block"></span><span  class=" centerFlowerImg d-inline-block">   <img src="/assets/images/1.png" alt=""></span><span class="rightLine d-inline-block"></span>
+      </div>
+    <div class="row homecard card-3">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-9 firstSec-image secOne-img p-0">
+            <img  data-aos="flip-left" [src]="homeCard3Img" alt="">
+
+        </div>
+        <div class="col-12 col-sm-12  col-md-12 col-lg-3 secOne-txt my-lg-auto my-md-3 my-xl-auto my-sm-3 my-3">
+            <div class="row"><div class="col-12"></div></div>
+            <div class="row"  data-aos="flip-right">
+                <div class="col-12  firstSec-text p-5">
+
+                        <div class="row">
+                            <div class="col-12 firstSec-text-img  d-flex justify-content-center">
+                                <img  class="iconimg" [src]="homeCard3IconImg" alt="">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="firstSec-text-header mt-4">
+                                  {{HomeCard3Heading}}
+                                 </h4>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12  firstSec-text-text mt-3">
+                                <h6>
+                                  {{HomeCard3TextContent}}
+
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mob-respo1">
+                                <button class=" explore-btn mt-4" [routerLink]="['/gallery', '3']" routerLinkActive="router-link-active">
+                                    EXPLORE
+                                        <i class="fa fa-long-arrow-alt-right"></i>
+
+                                </button>
+
+                            </div>
+                        </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="row"><div class="col-12"></div></div>
+
+        </div>
+    </div>
+    <div class="flower-design">
+        <span class="leftLine d-inline-block"></span><span  class=" centerFlowerImg d-inline-block">   <img src="/assets/images/1.png" alt=""></span><span class="rightLine d-inline-block"></span>
+      </div>
+
+  </div>
+  <div class="container homesectionTextArea">
+      <div class="row">
+          <div class="col-m-12 col-lg-12 col-sm-12 quotes-top mb-5 text-center">
+              <img src="/assets/images/5.png" alt="">
+
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-m-12 col-lg-12 col-sm-12">
+              <h1 class="bigSizeText">
+               {{bigsizetext}}
+
+              </h1>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-m-12 col-lg-12 col-sm-12 quotes-bottom mt-3 mb-2 text-center">
+            <img src="/assets/images/5.png" alt="">
+
+        </div>
+    </div>
+    <div class="flower-design">
+        <span class="leftLine d-inline-block"></span><span  class=" centerFlowerImg d-inline-block">   <img src="/assets/images/1.png" alt=""></span><span class="rightLine d-inline-block"></span>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-lg-12 col-xl-4 col-md-4 col-sm-12 col-12 who-we-are-header xl-p-0">
+            <div class="flower-design opacity">
+                <span class="leftLine d-inline-block opacity-10 who-line-1"></span><span  class=" centerFlowerImg-who d-inline-block">   <img src="/assets/images/1.png" alt=""></span><span class="rightLine d-inline-block who-line-2"></span>
+              </div>
+                  <h6 class="who">Who</h6>
+                <h6 class="we padding-left-5">We</h6>
+                <h6 class="are">are</h6>
+                <div class="flower-design opacity">
+                    <span class="leftLine d-inline-block who-line-1"></span><span  class=" centerFlowerImg-who d-inline-block">   <img src="/assets/images/1.png" alt=""></span><span class="rightLine d-inline-block who-line-2"></span>
+                  </div>
+          </div>
+          <div class="col-lg-12 col-xl-8 col-md-8 col-sm-12 col-12 xl-p-0">
+              <div class="container">
+                <h6 class=" who-we-are-content">
+                  {{whoarewecontent}}
+
+                  </h6>
+
+              </div>
+
+
+
+          </div>
+      </div>
+      <div class="flower-design">
+        <span class="leftLine d-inline-block"></span><span  class=" centerFlowerImg d-inline-block">   <img src="/assets/images/1.png" alt=""></span><span class="rightLine d-inline-block"></span>
+      </div>
+
+  </div>
+  <div class="container homeSectionMedia">
+      <div class="row">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center mb-5 mob-respo2">
+              <h1 class="sneak-peak-header">Bumble's Sneak Peek</h1>
+          </div>
+      </div>
+      <div class="row video-bg  mb-5">
+        <div class="col-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center">
+            <div class="video-content">
+              <!-- <iframe width="760" height="500" src="https://www.youtube.com/embed/vBIj9siOmP0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              <iframe width="760" height="500"  [src]="sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+requiredURL(videourl))" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <!-- <iframe width="760" height="500"  [src]="videourl" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            </div>
+          </div>
+       </div>
+    </div>
+    <form action="" #homebookusform="ngForm">
+ <div class="container-fluid booking-section">
+
+        <div class="row">
+            <div class="col-md-12 col-xl-4 col-lg-4 col-sm-12 col-12 bookingSec-row-1  order-2 order-sm-2 order-md-2 order-lg-2 order-xl-1">
+                    <input type="text" class="name form-control" name="homename" required placeholder="Name" autocomplete="off" [(ngModel)]="homename" required minlength="4" #homebookusname="ngModel">
+                    <div *ngIf="homebookusname.invalid && (homebookusname.dirty || homebookusname.touched)"  class="alert" style="padding: 0 !important; margin: 0 !important;">
+                            <span *ngIf="homebookusname.errors?.['required']">
+                              Name is required.
+                            </span>
+                            <span *ngIf="homebookusname.errors?.['minlength']">
+                              Name must be at least 4 characters long.
+                            </span>
+                            <div *ngIf="homebookusname.errors?.['forbiddenName']">
+                              Name cannot be Bob.
+                            </div>
+                          </div>
+            </div>
+            <div class="col-md-12 col-xl-4 col-lg-4 col-sm-12 col-12 bookingSec-row-2  order-2 order-sm-2 order-md-2 order-xl-2">
+                <input type="tel"  (keypress)="keyPressNumbers($event)"  name="homemobile" autocomplete="off" class="mobile form-control" placeholder="Mobile" [(ngModel)]="homemobile"   required minlength="10" maxlength="10" #homebookusmobile="ngModel">
+                <div *ngIf="homebookusmobile.invalid && (homebookusmobile.dirty || homebookusmobile.touched)" class="alert mob" style="padding: 0 !important; margin: 0 !important; position: relative; bottom: 45px;">
+                    <div *ngIf="homebookusmobile.errors?.['required']">
+                     Mobile number  is required.
+                    </div>
+                    <div *ngIf="homebookusmobile.errors?.['minlength']">
+                     Min & Max "10" Numbers Required
+                    </div>
+                    <div *ngIf="homebookusmobile.errors?.['forbiddenName']">
+                      Name cannot be Bob.
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-12 col-xl-4 col-lg-4 col-sm-12 col-12 bookingSec-row-3 order-1 order-sm-1 order-md-1 order-xl-3">
+                <h1 class="bookus">BOOK US NOW</h1>
+                <h4 class="mob-number d-md-none d-lg-none d-xl-none">+91 9876 543 120</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-xl-4 col-lg-4 col-sm-12 col-12 bookingSec-row-1">
+                <button class="submit-btn mb-5" style="font-size: 18px;"    [disabled]="!homebookusform.valid" *ngIf="homebookusform.valid" (click)="homebookus(homebookusform)">SUBMIT <i class="fas fa-chevron-circle-right"></i></button>
+                <button class="submit-btn mb-5" style="font-size: 18px;" id="abc" *ngIf="!homebookusform.valid" (click)="homebookustest()">SUBMIT <i class="fas fa-chevron-circle-right"></i></button>
+        </div>
+        <div class="col-md-12 col-xl-4 col-lg-4 col-sm-12 col-12 bookingSec-row-2">
+
+            <div class="row bookingSec-row-2-sub" *ngIf="successsubmit">
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-sm-12">
+                    <h3 class="thankyou">Thank You</h3>
+
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-sm-12">
+                    <h4 class="soon">
+                        We will contact You soon
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-xl-4 col-lg-4 col-sm-12 col-12 bookingSec-row-3 ">
+
+            <h4 class="mob-number d-none d-sm-block d-lg-block d-xl-block d-md-block">+91 9876 543 120</h4>
+        </div>
+
+        </div>
+
+    </div>
+  </form>
+<div class="container-fluid clientSays">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12-col-xl-12 col-lg-12">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12-col-xl-12 col-lg-12">
+                        <h1  class="clinetSaysHeader mt-5" style="font-family: butlerextrabold;">What Our Client says</h1>
+
+                  </div>
+            </div>
+            <div class="container">
+                <div class="row  clientSaysContent">
+                    <div class="col-12 col-sm-12 col-md-12-col-xl-12 col-lg-12">
+
+                      <div class="row">
+                        <div class="col-12">
+                          <owl-carousel-o [options]="customOptions1">
+                            <ng-template carouselSlide *ngFor="let testimonylist of testimony">
+                              <div class="row mt-5">
+                                <div class="col-12">
+                                  <img src="assets/images/up-quotes.png" alt="" class="testimony-quote-img up-quote" >
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12 text-center">
+                                  <!-- <div class="testimony-img-container">
+                                    <img src="assets/images/logo.png" alt="" class="w-25 testimony-user-img">
+                                  </div> -->
+                                  <div class="testimony-img-container">
+                                    <img src="{{testimonylist.testimony_image}}" alt="" class="w-25 testimony-user-img">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="testimony-text-container p-5">
+                                    <h4 class="tetimony-container">{{testimonylist.testimony_description}}</h4>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <h5 class="testimony-name">{{testimonylist.author}}</h5>
+                                </div>
+                              </div>
+                              <div class="row mb-5 mt-5">
+                                <div class="col-12">
+                                  <img src="assets/images/down-quotes.png" alt="" class="testimony-quote-img down-quote">
+                                </div>
+                              </div>
+                            </ng-template>
+                            <!-- <ng-template carouselSlide>
+                              <div class="row mt-5">
+                                <div class="col-12">
+                                  <img src="assets/images/up-quotes.png" alt="" class="testimony-quote-img up-quote" >
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12 text-center">
+                                  <div class="testimony-img-container">
+                                    <img src="assets/images/logo.png" alt="" class="w-25 testimony-user-img">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="testimony-text-container p-5">
+                                    <h4 class="tetimony-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nihil omnis quod maxime eveniet nam adipisci facilis, velit, accusamus autem voluptatum, vitae voluptatem labore! In hic nesciunt fugiat quia delectus!</h4>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <h5 class="testimony-name">-Tester Name</h5>
+                                </div>
+                              </div>
+                              <div class="row mb-5 mt-5">
+                                <div class="col-12">
+                                  <img src="assets/images/down-quotes.png" alt="" class="testimony-quote-img down-quote">
+                                </div>
+                              </div>
+                            </ng-template> -->
+                            <!-- <ng-template carouselSlide>
+                              <div class="row mt-5">
+                                <div class="col-12">
+                                  <img src="assets/images/up-quotes.png" alt="" class="testimony-quote-img up-quote" >
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12 text-center">
+                                  <div class="testimony-img-container">
+                                    <img src="assets/images/logo.png" alt="" class="w-25 testimony-user-img">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="testimony-text-container p-5">
+                                    <h4 class="tetimony-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nihil omnis quod maxime eveniet nam adipisci facilis, velit, accusamus autem voluptatum, vitae voluptatem labore! In hic nesciunt fugiat quia delectus!</h4>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <h5 class="testimony-name">-Tester Name</h5>
+                                </div>
+                              </div>
+                              <div class="row mb-5 mt-5">
+                                <div class="col-12">
+                                  <img src="assets/images/down-quotes.png" alt="" class="testimony-quote-img down-quote">
+                                </div>
+                              </div>
+                            </ng-template> -->
+                            <!-- <ng-template carouselSlide>
+                              <div class="row mt-5">
+                                <div class="col-12">
+                                  <img src="assets/images/up-quotes.png" alt="" class="testimony-quote-img up-quote" >
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12 text-center">
+                                  <div class="testimony-img-container">
+                                    <img src="assets/images/logo.png" alt="" class="w-25 testimony-user-img">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="testimony-text-container p-5">
+                                    <h4 class="tetimony-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nihil omnis quod maxime eveniet nam adipisci facilis, velit, accusamus autem voluptatum, vitae voluptatem labore! In hic nesciunt fugiat quia delectus!</h4>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <h5 class="testimony-name">-Tester Name</h5>
+                                </div>
+                              </div>
+                              <div class="row mb-5 mt-5">
+                                <div class="col-12">
+                                  <img src="assets/images/down-quotes.png" alt="" class="testimony-quote-img down-quote">
+                                </div>
+                              </div>
+                            </ng-template> -->
+                          </owl-carousel-o>
+
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog"  [class.d-block]="show2" [class.d-none]="!show2" style=" z-index: 1000000; ">
+      <div class="modal-dialog modal-dialog-centered d-flex justify-content-center align-items-center" role="document" >
+        <div class="modal-content" style="border: 2px solid #000; width: 30em !important;box-shadow: 5px 9px 16px grey;">
+          <div class="modal-header" style="background-color: #ffdf06 !important;border: none;padding: 0.5rem 1rem;">
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closepopup2()" style=" color: black;font-weight: 700; font-size: 18px;">X
+
+            </button>
+          </div>
+
+          <div class="modal-body  d-flex justify-content-center align-items-center" style="color: black; font-size: large; height: 5em; z-index: 10000; background-color: #ffdf06; height: 10em;">
+          You Have Contacted Us...!<br>
+          We Will Contact You Soon...!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog"  [class.d-block]="show3" [class.d-none]="!show3" style=" z-index: 1000000; ">
+      <div class="modal-dialog modal-dialog-centered d-flex justify-content-center align-items-center" role="document" >
+        <div class="modal-content" style="border: 2px solid #000; width: 30em !important;box-shadow: 5px 9px 16px grey;">
+          <div class="modal-header" style="background-color: #ffdf06 !important;border: none;padding: 0.5rem 1rem;">
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closepopup3()" style=" color: black;font-weight: 700; font-size: 18px;">X
+
+            </button>
+          </div>
+
+          <div class="modal-body  d-flex justify-content-center align-items-center" style="color: black; font-size: large; height: 5em; z-index: 10000; background-color: #ffdf06; height: 10em;"  >
+
+         Please Fill The Form
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+

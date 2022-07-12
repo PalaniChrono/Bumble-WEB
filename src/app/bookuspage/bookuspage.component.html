@@ -1,0 +1,209 @@
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col-12 text-center">
+      <img src="/assets/images/LogoBlack.png" class="headerLogoImg" alt="" [routerLink]="''">
+    </div>
+  </div>
+</div>
+<app-header></app-header>
+<div class="flower-design" style="margin: 2% auto;">
+  <span class="leftLine d-inline-block"></span><span  class=" centerFlowerImg d-inline-block">   <img src="/assets/images/1.png" alt=""></span><span class="rightLine d-inline-block"></span>
+</div>
+<form action="" #bookuspage="ngForm">
+ <div class="container bookuscontainer">
+   <div class="row">
+    <div class="col-md-6 col-lg-6 col-xl-6 col-12 col-sm-12">
+      <label class="bookuslabel" for="bookusbridename">Bride Name</label>
+     <input   type="text" class="w-100 bookusinput form-control" name="bookusbridename" [(ngModel)]="bookusBrideName" required #bookusbridename="ngModel" minlength="2" autocomplete="off">
+     <div *ngIf="bookusbridename.invalid && (bookusbridename.dirty || bookusbridename.touched)"class="alert">
+  <div *ngIf="bookusbridename.errors?.['required']">Bride  Name is required*</div>
+  <div *ngIf="bookusbridename.errors?.['minlength']"> Name must be at least 2 characters long*</div>
+  <div *ngIf="bookusbridename.errors?.['forbiddenName']">Name cannot be Name.</div>
+</div>
+    </div>
+   <div class="col-md-6 col-lg-6 col-xl-6 col-12 col-sm-12">
+     <label class="bookuslabel" for="bookusgroomname">Groom Name</label>
+     <input   type="text" class="w-100 bookusinput form-control" name="bookusgroomname" [(ngModel)]="bookusGroomName" required #bookusgroomname="ngModel" minlength="2" autocomplete="off">
+     <div *ngIf="bookusgroomname.invalid && (bookusgroomname.dirty || bookusgroomname.touched)"class="alert">
+  <div *ngIf="bookusgroomname.errors?.['required']">Groom Name is required*</div>
+  <div *ngIf="bookusgroomname.errors?.['minlength']">Name must be at least 2 characters long*</div>
+  <div *ngIf="bookusgroomname.errors?.['forbiddenName']">Name cannot be Name.</div>
+  </div>
+</div>
+</div>
+<div class="row mt-3" *ngFor="let dynamicEventInput of Variation;let i=index">
+  <!-- <div class="col-12 mt-5 mb-3" *ngIf="Variation.length>2">
+    <hr style="opacity: 1 !important; background-color: #ffdf06 !important;height: 2px !important;">
+</div> -->
+  <div class="col-12 text-center"><h1 style="text-decoration: underline;">Event-{{i+1}}</h1></div>
+  <div class="col-12 text-center"><h1>Event Details</h1></div>
+  <div class="col-md-4 col-lg-4 col-xl-4 col-12 col-sm-12">
+    <label class="bookuslabel" for="bookuseventname">Event Name</label>
+    <input type="tel" class="w-100  bookusinput form-control" name="bookuseventname{{i}}" [(ngModel)]="dynamicEventInput.event_name" autocomplete="false" required #bookuseventname="ngModel" minlength="2" autocomplete="off">
+    <div *ngIf="bookuseventname.invalid && (bookuseventname.dirty || bookuseventname.touched)"class="alert">
+     <div *ngIf="bookuseventname.errors?.['required']">Event Name is Required*</div>
+     <div *ngIf="bookuseventname.errors?.['minlength']"> Event Name is Min "2" letters Required*</div>
+   </div>
+  </div>
+  <div class="col-md-4 col-lg-4 col-xl-4 col-12 col-sm-12">
+    <label class="bookuslabel" for="bookuseventdate">Date</label>
+    <input   type="date" min="{{mindate}}" class="w-100 bookusinput form-control" required placeholder="date" name="bookuseventdate{{i}}"  [(ngModel)]="dynamicEventInput.event_date" #bookuseventdate="ngModel"  id="txtDate">
+    <div *ngIf="bookuseventdate.invalid && (bookuseventdate.dirty || bookuseventdate.touched)"class="alert">
+      <div *ngIf="bookuseventdate.errors?.['required']">Date is Required*</div>
+     </div>
+  </div>
+  <div class="col-md-4 col-lg-4 col-xl-4 col-12 col-sm-12">
+    <label class="bookuslabel" for="bookustime">Time</label>
+    <input   type="time" class="w-100 bookusinput form-control" required name="bookustime{{i}}" [(ngModel)]="dynamicEventInput.event_time" #bookustime="ngModel" #bookustime1  >
+    <div *ngIf="bookustime.invalid && (bookustime.dirty || bookustime.touched)"class="alert">
+      <div *ngIf="bookustime.errors?.['required']">Time is Required*</div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-6 col-xl-6 col-12 col-sm-12">
+    <label class="bookuslabel" for="bookusvenue">Venue</label>
+  <input type="text" class="w-100 bookusinput form-control" required name="bookusvenue{{i}}" [(ngModel)]="dynamicEventInput.venue" #bookusvenue="ngModel">
+  <div *ngIf="bookusvenue.invalid && (bookusvenue.dirty || bookusvenue.touched)"class="alert">
+    <div *ngIf="bookusvenue.errors?.['required']">Venue is Required*</div>
+  </div>
+  </div>
+  <div class="col-md-6 col-lg-6 col-xl-6 col-12 col-sm-12">
+    <label class="bookuslabel" for="bookuscity">City</label>
+    <input type="text" class="w-100 bookusinput " name="bookuscity{{i}}" [(ngModel)]="dynamicEventInput.city" required #bookuscity="ngModel" minlength="3">
+    <div *ngIf="bookuscity.invalid && (bookuscity.dirty || bookuscity.touched)"class="alert">
+      <div *ngIf="bookuscity.errors?.['required']">City is Required*</div>
+      <div *ngIf="bookuscity.errors?.['minlength']">City Name min 3 letters Required*</div>
+    </div>
+    
+
+<!-- <div class="col-12 mt-5 mb-5" *ngIf="Variation.length>1">
+  <Button (click)="removeEvent(i)" class="add-more-event">- Remove</Button>
+</div> -->
+<div class="col-12" *ngIf="Variation.length>1">
+  <button class="add-more-event remove-button"  (click)="removeEvent(i)" ><h3>Remove</h3><i class="fas fa-minus mobsubmit"  style="position: relative;left: 4px;"></i></button>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-12 add-button">
+    <button style="float: right;" class="add-more-event" (click)="addEvent()" [disabled]="Variation?.length>3"><h3>Add More Event</h3><i class="fas fa-plus mobsubmit"  style="position: relative;left: 4px;"></i></button>
+  </div>
+</div>
+<div class="row"><div class="col-12 text-center mt-5"><h1>Enquirer Details</h1> </div></div>
+<div class="row">
+
+
+<div class="col-md-4 col-lg-4 col-xl-4 col-12">
+  <label  class="bookuslabel" for="bookusenquirername">Enquirer Name</label>
+  <input  type="text" class="w-100 bookusinput form-control" required minlength="2" name="bookusenquirername" [(ngModel)]="bookusEnquirerName" #bookusenquirername="ngModel">
+  <div *ngIf="bookusenquirername.invalid && (bookusenquirername.dirty || bookusenquirername.touched)"class="alert">
+    <div *ngIf="bookusenquirername.errors?.['required']">Enquirer Name is Required*</div>
+    <div *ngIf="bookusenquirername.errors?.['minlength']">Minimum "2" Letters Required*</div>
+  </div>
+</div>
+<div class="col-md-4 col-lg-4 col-xl-4 col-12">
+  <label class="bookuslabel" for="bookusenquirerphone">Mobile Number</label>
+  <input type="tel" class="w-100  bookusinput form-control" name="bookusenquirerphone" [(ngModel)]="bookusEnquirerPhone" autocomplete="false" required #bookusenquirerphone="ngModel" minlength="10" maxlength="10" (keypress)="keyPressNumbers($event)" autocomplete="off">
+  <div *ngIf="bookusenquirerphone.invalid && (bookusenquirerphone.dirty || bookusenquirerphone.touched)"class="alert">
+   <div *ngIf="bookusenquirerphone.errors?.['required']">Mobile Number is Required*</div>
+   <div *ngIf="bookusenquirerphone.errors?.['minlength']">Mobile Number Min "10" Required*</div>
+   <div *ngIf="bookusenquirerphone.errors?.['forbiddenName']">Name cannot be Bob.</div>
+  </div>
+</div>
+<div class="col-md-4 col-lg-4 col-xl-4 col-12">
+  <label class="bookuslabel" for="bookusenquireremail">Email(Optional)</label>
+  <input  type="email" class="w-100 bookusinput form-control" name="bookusenquireremail" [(ngModel)]="bookusEnquirerEmail"     #bookusenquireremail="ngModel">
+</div>
+</div>
+
+
+
+  <div class="row mt-5">
+    <div class="col-12 d-flex justify-content-center align-items-center">
+      <button class="submitbtn" type="submit" (click)="Bookus(bookuspage)" *ngIf="bookuspage.valid" [disabled]="!bookuspage.valid" style="padding: 1% 5% !important; background-color: red !important;">SUBMIT <i class="fas fa-chevron-circle-right mobsubmit"  style="position: relative;
+          bottom: -12px;
+          left: 15px;
+          margin: -12%;"></i></button>
+
+  <button class="submitbtn" type="submit" (click)="validate()" *ngIf="!bookuspage.valid" style="padding: 1% 5% !important;background-color: yellow !important;">SUBMIT <i class="fas fa-chevron-circle-right mobsubmit"  style="position: relative;
+    bottom: -12px;
+    left: 15px;
+    margin: -12%;"></i></button>
+
+  </div>
+  </div>
+
+</div>
+
+</form>
+<div class="modal" tabindex="-1" role="dialog"  [class.d-block]="show2" [class.d-none]="!show2" style=" z-index: 1000000; ">
+  <div class="modal-dialog modal-dialog-centered d-flex justify-content-center align-items-center" role="document" >
+    <div class="modal-content" style="border: 2px solid #000; width: 30em !important;box-shadow: 5px 9px 16px grey;">
+      <div class="modal-header" style="background-color: #ffdf06 !important;border: none;padding: 0.5rem 1rem;">
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closepopup2()" style=" color: black;font-weight: 700; font-size: 18px;">X
+
+        </button>
+      </div>
+
+      <div class="modal-body  d-flex justify-content-center align-items-center" style="color: black; font-size: large; height: 5em; z-index: 10000; background-color: #ffdf06; height: 10em;"  >
+
+      You Have Contacted Us...!<br>
+      We Will Contact You Soon...!
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal" tabindex="-1" role="dialog"  [class.d-block]="show3" [class.d-none]="!show3" style=" z-index: 1000000; ">
+  <div class="modal-dialog modal-dialog-centered d-flex justify-content-center align-items-center" role="document" >
+    <div class="modal-content" style="border: 2px solid #000; width: 30em !important;box-shadow: 5px 9px 16px grey;">
+      <div class="modal-header" style="background-color: #ffdf06 !important;border: none;padding: 0.5rem 1rem;">
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closepopup3()" style=" color: black;font-weight: 700; font-size: 18px;">X
+
+        </button>
+      </div>
+
+      <div class="modal-body  d-flex justify-content-center align-items-center" style="color: black; font-size: large; height: 5em; z-index: 10000; background-color: #ffdf06; height: 10em;"  >
+
+     Please Fill the Form
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="flower-design" style="margin: 2% auto;">
+  <span class="leftLine d-inline-block"></span><span  class=" centerFlowerImg d-inline-block">   <img src="/assets/images/1.png" alt=""></span><span class="rightLine d-inline-block"></span>
+</div>
+
+
+
+<style>
+  .alert {
+    color: red;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    height: 1px;
+    position: relative;
+    bottom: 7px;
+
+}
+.bookuslabel{
+  white-space: nowrap;
+}
+</style>
+

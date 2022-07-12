@@ -1,0 +1,48 @@
+.clientSaysContent {
+  background-color: white;
+  margin: 2% 13% 10% 13%;
+  -webkit-box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px #000000b5;
+}
+.testimony-quote-img{
+  width: 7% !important;
+
+}
+img.up-quote {
+  position: relative;
+  left: 10%;
+}
+img.down-quote {
+  float: right;
+  position: relative;
+  right: 10%;
+}
+.testimony-img-container {
+  position: relative;
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+}
+.testimony-text-container {
+  position: relative;
+  /* bottom: 40%; */
+}
+.testimony-user-img{
+  border-radius: 50%;
+}
+.tetimony-container{
+  font-family: butlerextrabold !important;
+  font-size: 21px;
+  text-align: justify;
+  letter-spacing: 1px;
+line-height: 1.5;
+}
+h5.testimony-name {
+  float: right;
+  position: relative;
+  right: 10%;
+  /* bottom: 70%; */
+  font-family: hellogeorgia, sans-serif !important;
+  font-weight: 600;
+  font-size: 20px;
+}
