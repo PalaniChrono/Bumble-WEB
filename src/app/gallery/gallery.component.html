@@ -14,7 +14,6 @@
     <div class="row">
         <div class="col-xl-12 col-md-12 col-lg-12 col-12 col-sm-12">
             <h1 class="gallery-header">Gallery</h1>
-
         </div>
     </div>
 </div>
@@ -22,24 +21,43 @@
 <div class="container mb-5">
     <div class="row">
         <div class="col-12 mx-auto">
-            <mat-tab-group [selectedIndex]="menuIndex">
-
+            <mat-tab-group [selectedIndex]="menuIndex" animationDuration="200ms">
                 <mat-tab label="All">
                      <div class="container mt-3">
-
-                        <h6 class="gallerySecAllContent"  >
+                        <h6 class="gallerySecAllContent">
                             {{alltextcontent}}
                         </h6>
-                    <mat-grid-list cols="3" [gutterSize]="'1.5%'" >
+                        <div class="all-container-1 mt-5">
+                          <div class="all-verical-image1"><img [src]="babywash[0].imageUrl" alt="" class="gallery-image"  (click)="previewImage(babywash[0].imageUrl)"></div>
+                          <div class="all-vertical-image2"><img [src]="babywash[1].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[1].imageUrl)"></div>
+                          <div class="all-vertical-image3"><img [src]="babywash[2].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[2].imageUrl)"></div>
+                          <div class="all-vertical-image4"><img [src]="babywash[3].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[3].imageUrl)"></div>
+                        </div>
+
+                        <div class="all-container-2">
+                          <div class="all-vertical-image7"><img [src]="outdoor[2].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[2].imageUrl)"></div>
+                          <div class="all-vertical-image8"><img [src]="outdoor[3].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[3].imageUrl)"></div>
+                          <div class="all-verical-image9"><img [src]="outdoor[4].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[4].imageUrl)"></div>
+                          <div class="all-vertical-image5"><img [src]="outdoor[0].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[0].imageUrl)"></div>
+                          <div class="all-vertical-image6"><img [src]="outdoor[1].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[1].imageUrl)"></div>
+                        </div>
+
+                        <div class="all-container-3">
+                          <div class="all-vertical-image10"><img [src]="wedding[11].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[11].imageUrl)"></div>
+                          <div class="all-vertical-image11"><img [src]="wedding[12].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[12].imageUrl)"></div>
+                          <div class="all-vertical-image12"><img [src]="wedding[7].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[7].imageUrl)"></div>
+                          <div class="all-vertical-image13"><img [src]="wedding[10].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[10].imageUrl)"></div>
+                        </div>
+
+                    <!-- <mat-grid-list cols="3" [gutterSize]="'1.5%'" >
                         <mat-grid-tile
                             *ngFor="let all of all"
                             [colspan]="all.cols"
                             [rowspan]="all.rows"
                             [class.mat-elevation-z8]="isActive"  class="swing">
                             <img  class="w-100 img-height  all-section-4  grid-image-{{all.text}} "  [src]="all.imageUrl" alt=""  >
-
                         </mat-grid-tile>
-                      </mat-grid-list>
+                      </mat-grid-list> -->
                     </div>
                 </mat-tab>
                 <mat-tab label="Weddings" [class.selected-tab]="menuIndex == 1" >
@@ -47,7 +65,26 @@
                         <h6 class="gallerySecAllContent" >
                            {{weddingTextContent}}
                         </h6>
-                        <mat-grid-list cols="3" [gutterSize]="'1.5%'">
+                        <div class="wedding-container-1 mt-5">
+                          <div class="wedding-imag1"><img [src]="wedding[0].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[0].imageUrl)"></div>
+                          <div class="wedding-img2"><img [src]="wedding[3].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[3].imageUrl)"></div>
+                          <div class="wedding-img3"><img [src]="wedding[1].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[1].imageUrl)"></div>
+                          <div class="weddding-img4"><img [src]="wedding[4].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[4].imageUrl)"></div>
+                          <div class="wedding-imag5"><img [src]="wedding[2].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[2].imageUrl)"></div>
+                          <div class="wedding-img6"><img [src]="wedding[5].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[5].imageUrl)"></div>
+                          <div class="wedding-img7"><img [src]="wedding[6].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[6].imageUrl)"></div>
+                        </div>
+
+                        <div class="wedding-container-2  mt-4">
+                          <div class="wedding-img-8"><img [src]="wedding[7].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[7].imageUrl)"></div>
+                          <div class="wedding-img9"><img [src]="wedding[12].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[12].imageUrl)"></div>
+                          <div class="wedding-img10"><img [src]="wedding[8].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[8].imageUrl)"></div>
+                          <div class="wedding-img11"><img [src]="wedding[10].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[10].imageUrl)"></div>
+                          <div class="wedding-img12"><img [src]="wedding[9].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[9].imageUrl)"></div>
+                          <div class="wedding-img13"><img [src]="wedding[11].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[11].imageUrl)"></div>
+                          <div class="wedding-img14"><img [src]="wedding[13].imageUrl" alt="" class="gallery-image" (click)="previewImage(wedding[13].imageUrl)"></div>
+                        </div>
+                        <!-- <mat-grid-list cols="3" [gutterSize]="'1.5%'">
                             <mat-grid-tile
                                 *ngFor="let wedding of wedding"
                                 [colspan]="wedding.cols"
@@ -56,7 +93,7 @@
                                 class="swing" >
                                 <img  class="w-100 img-height all-section-4 shadow-4  grid-image-{{wedding.text}} "  [src]="wedding.imageUrl" alt="">
                             </mat-grid-tile>
-                          </mat-grid-list>
+                          </mat-grid-list> -->
                         </div>
                  </mat-tab>
                 <mat-tab label="Outdoors" >
@@ -64,7 +101,25 @@
                         <h6 class="gallerySecAllContent"  >
                             {{outDoorTextContent}}
                         </h6>
-                        <mat-grid-list cols="3" [gutterSize]="'1.5%'">
+
+                        <div class="outdoor-container-1 mt-5">
+                          <div class="outdoor-vertical-image7"><img [src]="outdoor[2].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[2].imageUrl)"></div>
+                          <div class="outdoor-vertical-image8"><img [src]="outdoor[3].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[3].imageUrl)"></div>
+                          <div class="outdoor-verical-image9"><img [src]="outdoor[4].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[4].imageUrl)"></div>
+                          <div class="outdoor-vertical-image5"><img [src]="outdoor[0].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[0].imageUrl)"></div>
+                          <div class="outdoor-vertical-image6"><img [src]="outdoor[1].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[1].imageUrl)"></div>
+                        </div>
+
+                        <div class="outdoor-container-2  mt-4">
+                          <div class="outdoor-img-8"><img [src]="outdoor[5].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[5].imageUrl)"></div>
+                          <div class="outdoor-img9"><img [src]="outdoor[8].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[8].imageUrl)"></div>
+                          <div class="outdoor-img10"><img [src]="outdoor[6].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[6].imageUrl)"></div>
+                          <div class="outdoor-img11"><img [src]="outdoor[9].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[9].imageUrl)"></div>
+                          <div class="outdoor-img12"><img [src]="outdoor[7].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[7].imageUrl)"></div>
+                          <div class="outdoor-img13"><img [src]="outdoor[10].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[10].imageUrl)"></div>
+                          <div class="outdoor-img14"><img [src]="outdoor[11].imageUrl" alt="" class="gallery-image" (click)="previewImage(outdoor[11].imageUrl)"></div>
+                        </div>
+                        <!-- <mat-grid-list cols="3" [gutterSize]="'1.5%'">
                             <mat-grid-tile
                                 *ngFor="let outdoor of outdoor"
                                 [colspan]="outdoor.cols"
@@ -73,7 +128,7 @@
                                 class="swing" >
                                 <img  class="w-100  img-height all-section-4  grid-image-{{outdoor.text}} "  [src]="outdoor.imageUrl" alt="">
                             </mat-grid-tile>
-                          </mat-grid-list>
+                          </mat-grid-list> -->
                         </div>
                 </mat-tab>
                 <mat-tab label="Babywash" >
@@ -81,7 +136,23 @@
                         <h6 class="gallerySecAllContent" >
                             {{babywashtext}}
                         </h6>
-                        <mat-grid-list cols="3" [gutterSize]="'1.5%'">
+                        <div class="babywash-container-1 mt-5">
+                          <div class="babywash-verical-image1"><img [src]="babywash[0].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[0].imageUrl)"></div>
+                          <div class="babywash-vertical-image2"><img [src]="babywash[1].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[1].imageUrl)"></div>
+                          <div class="babywash-vertical-image3"><img [src]="babywash[2].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[2].imageUrl)"></div>
+                          <div class="babywash-vertical-image4"><img [src]="babywash[3].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[3].imageUrl)"></div>
+                        </div>
+
+                        <div class="babywash-container2">
+                          <div class="babywash-img1"><img [src]="babywash[4].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[4].imageUrl)"></div>
+                          <div class="babywash-img2"><img [src]="babywash[5].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[5].imageUrl)"></div>
+                          <div class="babywash-img3"><img [src]="babywash[6].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[6].imageUrl)"></div>
+                          <div class="babywash-img4"><img [src]="babywash[7].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[7].imageUrl)"></div>
+                          <div class="babywash-img5"><img [src]="babywash[8].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[8].imageUrl)"></div>
+                          <div class="babywash-img6"><img [src]="babywash[9].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[9].imageUrl)"></div>
+                          <div class="babywash-img7"><img [src]="babywash[10].imageUrl" alt="" class="gallery-image" (click)="previewImage(babywash[10].imageUrl)"></div>
+                        </div>
+                        <!-- <mat-grid-list cols="3" [gutterSize]="'1.5%'">
                             <mat-grid-tile
                                 *ngFor="let babywash of babywash"
                                 [colspan]="babywash.cols"
@@ -89,13 +160,32 @@
                                 [class.mat-elevation-z8]="isActive"
                                 class="swing" >
                                 <img  class="w-100  img-height all-section-4  grid-image-{{babywash.text}} "  [src]="babywash.imageUrl" alt="">
-                              <!-- {{tile.imageUrl}} -->
                             </mat-grid-tile>
-                          </mat-grid-list>
+                          </mat-grid-list> -->
                         </div>
                 </mat-tab>
               </mat-tab-group>
 
         </div>
     </div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" id="previewModal" data-toggle="modal" data-target="#exampleModalCenter" style="visibility: hidden;">
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+
+      <div class="modal-body">
+      <img [src]="previewImageSrc" alt="" class="w-100">
+   </div>
+
+    </div>
+  </div>
 </div>
+</div>
+
+
+

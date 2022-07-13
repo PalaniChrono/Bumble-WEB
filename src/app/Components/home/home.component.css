@@ -1,11 +1,11 @@
 .clientSaysContent {
   background-color: white;
-  margin: 2% 13% 10% 13%;
+  /* margin: 2% 13% 10% 13%; */
   -webkit-box-shadow: 0 0 10px #fff;
   box-shadow: 0 0 10px #000000b5;
 }
 .testimony-quote-img{
-  width: 7% !important;
+  width: 5% !important;
 
 }
 img.up-quote {

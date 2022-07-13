@@ -24,7 +24,7 @@ export class GalleryComponent implements OnInit {
 
   loading : boolean = true;
   isActive : boolean = true;
-
+  previewImageSrc:String = "";
 
 
   all = [
@@ -47,7 +47,7 @@ export class GalleryComponent implements OnInit {
     {text: 'one ', cols: 1, rows: 2, color: 'lightblue', imageUrl:''},
     {text: 'two', cols: 1, rows: 1, color: 'lightgreen' , imageUrl:""},
     {text: 'three', cols: 1, rows: 1, color: 'lightpink', imageUrl:""},
-    {text: 'four', cols: 2, rows: 1, color: '#DDBDF1', imageUrl:"https://res.cloudinary.com/de0mpuv0c/image/upload/h_400,w_400/v1645794902/BlaackForrest/home/section_three_main_image.png"},
+    {text: 'four', cols: 2, rows: 1, color: '#DDBDF1', imageUrl:"https://res.cloudinary.com/de0mpuv0c/image/upload/h_373.33,w_560.53/v1645794902/BlaackForrest/home/section_three_main_image.png"},
 
     {text: 'five', cols: 1, rows: 1, color: 'lightblue', imageUrl:"https://res.cloudinary.com/de0mpuv0c/image/upload/h_400,w_400/v1645794902/BlaackForrest/home/section_three_main_image.png"},
     {text: 'six', cols: 1, rows: 1, color: 'lightblue', imageUrl:"https://res.cloudinary.com/de0mpuv0c/image/upload/h_400,w_400/v1645794902/BlaackForrest/home/section_three_main_image.png"},
@@ -57,6 +57,8 @@ export class GalleryComponent implements OnInit {
     {text: 'ten', cols: 1, rows: 1, color: 'lightblue', imageUrl:"https://res.cloudinary.com/de0mpuv0c/image/upload/h_400,w_400/v1645794902/BlaackForrest/home/section_three_main_image.png"},
     {text: 'eleven', cols: 1, rows: 1, color: 'lightblue', imageUrl:"https://res.cloudinary.com/de0mpuv0c/image/upload/h_400,w_400/v1645794902/BlaackForrest/home/section_three_main_image.png"},
     {text: 'twelve', cols: 1, rows: 1, color: 'lightblue', imageUrl:"https://res.cloudinary.com/de0mpuv0c/image/upload/h_400,w_400/v1645794902/BlaackForrest/home/section_three_main_image.png"},
+    {text: 'thirteen', cols: 1, rows: 1, color: 'lightblue', imageUrl:"https://res.cloudinary.com/de0mpuv0c/image/upload/h_400,w_400/v1645794902/BlaackForrest/home/section_three_main_image.png"},
+    {text: 'fourteen', cols: 1, rows: 1, color: 'lightblue', imageUrl:"https://res.cloudinary.com/de0mpuv0c/image/upload/h_400,w_400/v1645794902/BlaackForrest/home/section_three_main_image.png"},
   ];
 
 
@@ -152,6 +154,8 @@ export class GalleryComponent implements OnInit {
     this.wedding[9].imageUrl =  value[0].wedding10
     this.wedding[10].imageUrl =  value[0].wedding11
     this.wedding[11].imageUrl =  value[0].wedding12
+    this.wedding[12].imageUrl =  value[0].wedding13
+    this.wedding[13].imageUrl =  value[0].wedding14
 
 
 
@@ -247,6 +251,11 @@ export class GalleryComponent implements OnInit {
 
     })
 
+  }
+  previewImage(src: String){
+this.previewImageSrc = src;
+var modalbutton= document.getElementById('previewModal') as HTMLElement
+modalbutton.click()
   }
 
 }

@@ -329,157 +329,79 @@
 <div class="container-fluid clientSays">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12-col-xl-12 col-lg-12">
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-12 col-sm-12 col-md-12-col-xl-12 col-lg-12">
                         <h1  class="clinetSaysHeader mt-5" style="font-family: butlerextrabold;">What Our Client says</h1>
 
                   </div>
             </div>
-            <div class="container">
-                <div class="row  clientSaysContent">
-                    <div class="col-12 col-sm-12 col-md-12-col-xl-12 col-lg-12">
+            <div class="row">
+              <div class="col-12">
+                <div class="container p-5">
+                  <div class="row">
+                    <div class="col-12 p-5">
+                      <div class="container p-5">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="row  clientSaysContent">
+                              <div class="col-12 col-sm-12 col-md-12-col-xl-12 col-lg-12">
+                                <div class="row">
+                                  <div class="col-12">
+                                    <owl-carousel-o [options]="customOptions1">
+                                      <ng-template carouselSlide *ngFor="let testimonylist of testimony">
+                                        <div class="row mt-5">
+                                          <div class="col-12">
+                                            <img src="assets/images/up-quotes.png" alt="" class="testimony-quote-img up-quote" >
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-12 text-center">
+                                            <div class="testimony-img-container">
+                                              <img src="{{testimonylist.testimony_image}}" alt="" class="w-25 testimony-user-img">
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-12">
+                                            <div class="testimony-text-container p-5">
+                                              <h4 class="tetimony-container">{{testimonylist.testimony_description}}</h4>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-12">
+                                            <h5 class="testimony-name">{{testimonylist.author}}</h5>
+                                          </div>
+                                        </div>
+                                        <div class="row mb-5 mt-5">
+                                          <div class="col-12">
+                                            <img src="assets/images/down-quotes.png" alt="" class="testimony-quote-img down-quote">
+                                          </div>
+                                        </div>
+                                      </ng-template>
 
-                      <div class="row">
-                        <div class="col-12">
-                          <owl-carousel-o [options]="customOptions1">
-                            <ng-template carouselSlide *ngFor="let testimonylist of testimony">
-                              <div class="row mt-5">
-                                <div class="col-12">
-                                  <img src="assets/images/up-quotes.png" alt="" class="testimony-quote-img up-quote" >
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12 text-center">
-                                  <!-- <div class="testimony-img-container">
-                                    <img src="assets/images/logo.png" alt="" class="w-25 testimony-user-img">
-                                  </div> -->
-                                  <div class="testimony-img-container">
-                                    <img src="{{testimonylist.testimony_image}}" alt="" class="w-25 testimony-user-img">
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12">
-                                  <div class="testimony-text-container p-5">
-                                    <h4 class="tetimony-container">{{testimonylist.testimony_description}}</h4>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12">
-                                  <h5 class="testimony-name">{{testimonylist.author}}</h5>
-                                </div>
-                              </div>
-                              <div class="row mb-5 mt-5">
-                                <div class="col-12">
-                                  <img src="assets/images/down-quotes.png" alt="" class="testimony-quote-img down-quote">
-                                </div>
-                              </div>
-                            </ng-template>
-                            <!-- <ng-template carouselSlide>
-                              <div class="row mt-5">
-                                <div class="col-12">
-                                  <img src="assets/images/up-quotes.png" alt="" class="testimony-quote-img up-quote" >
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12 text-center">
-                                  <div class="testimony-img-container">
-                                    <img src="assets/images/logo.png" alt="" class="w-25 testimony-user-img">
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12">
-                                  <div class="testimony-text-container p-5">
-                                    <h4 class="tetimony-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nihil omnis quod maxime eveniet nam adipisci facilis, velit, accusamus autem voluptatum, vitae voluptatem labore! In hic nesciunt fugiat quia delectus!</h4>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12">
-                                  <h5 class="testimony-name">-Tester Name</h5>
-                                </div>
-                              </div>
-                              <div class="row mb-5 mt-5">
-                                <div class="col-12">
-                                  <img src="assets/images/down-quotes.png" alt="" class="testimony-quote-img down-quote">
-                                </div>
-                              </div>
-                            </ng-template> -->
-                            <!-- <ng-template carouselSlide>
-                              <div class="row mt-5">
-                                <div class="col-12">
-                                  <img src="assets/images/up-quotes.png" alt="" class="testimony-quote-img up-quote" >
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12 text-center">
-                                  <div class="testimony-img-container">
-                                    <img src="assets/images/logo.png" alt="" class="w-25 testimony-user-img">
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12">
-                                  <div class="testimony-text-container p-5">
-                                    <h4 class="tetimony-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nihil omnis quod maxime eveniet nam adipisci facilis, velit, accusamus autem voluptatum, vitae voluptatem labore! In hic nesciunt fugiat quia delectus!</h4>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12">
-                                  <h5 class="testimony-name">-Tester Name</h5>
-                                </div>
-                              </div>
-                              <div class="row mb-5 mt-5">
-                                <div class="col-12">
-                                  <img src="assets/images/down-quotes.png" alt="" class="testimony-quote-img down-quote">
-                                </div>
-                              </div>
-                            </ng-template> -->
-                            <!-- <ng-template carouselSlide>
-                              <div class="row mt-5">
-                                <div class="col-12">
-                                  <img src="assets/images/up-quotes.png" alt="" class="testimony-quote-img up-quote" >
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12 text-center">
-                                  <div class="testimony-img-container">
-                                    <img src="assets/images/logo.png" alt="" class="w-25 testimony-user-img">
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12">
-                                  <div class="testimony-text-container p-5">
-                                    <h4 class="tetimony-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nihil omnis quod maxime eveniet nam adipisci facilis, velit, accusamus autem voluptatum, vitae voluptatem labore! In hic nesciunt fugiat quia delectus!</h4>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12">
-                                  <h5 class="testimony-name">-Tester Name</h5>
-                                </div>
-                              </div>
-                              <div class="row mb-5 mt-5">
-                                <div class="col-12">
-                                  <img src="assets/images/down-quotes.png" alt="" class="testimony-quote-img down-quote">
-                                </div>
-                              </div>
-                            </ng-template> -->
-                          </owl-carousel-o>
+                                    </owl-carousel-o>
 
+                                  </div>
+                                </div>
+
+
+                              </div>
+
+                          </div>
+                          </div>
                         </div>
                       </div>
-
-
                     </div>
+                  </div>
 
-                </div>
 
+              </div>
+
+              </div>
             </div>
+
+
 
         </div>
     </div>
